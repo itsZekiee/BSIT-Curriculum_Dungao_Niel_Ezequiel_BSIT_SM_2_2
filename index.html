@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polytechnic University of the Philippines</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+  
+    header {
+      background-color: white;
+      overflow: hidden;
+      padding: 10px 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    nav {
+      display: flex;
+    }
+  
+    nav a {
+      position: relative;
+      color: #333;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      overflow: hidden;
+    }
+  
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #333;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    nav a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #333;
+      text-decoration: none;
+      z-index: 2;
+    }
+  
+    .title_banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+  
+    .title_banner h1,
+    .title_banner h4 {
+        margin: 0;
+    }
+  
+      table {
+        width: 70%;
+        margin: 7px auto;
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+    }
+  
+    th {
+        padding: 10px;
+    }
+  
+    .th_one {
+        margin-top: 10px;
+        width: fit-content;
+        text-align: left;
+        display: flex;
+        align-items: center;
+    }
+  
+    .th_one img {
+        max-width: 80px;
+        height: auto;
+        margin-right: 5px;
+    }
+  
+    .th_two {
+        text-align: left;
+    }
+  
+    .box {
+        padding: 3px 2px;
+        background-color: white;
+        border: 2px solid gray;
+        display: inline-block;
+    }
+  
+    .th_four {
+        text-align: right;
+    }
+  
+    .school_name {
+        margin-left: 10px;
+    }
+  
+    .col_two {
+        padding: 3px 3px;
+        margin: 0;
+    }
+  
+    img {
+        max-height: 60px;
+        max-width: 100%;
+        height: auto;
+    }
+  
+    .qr-code {
+        max-height: 80px;
+        max-width: 100%;
+        height: auto;
+    }
+  
+    h4,
+    h5 {
+        margin: 0;
+    }
+  
+    .credentials,
+    .acadYear,
+    .term {
+        text-align: left;
+        padding: 10px;
+    }
+  
+    .acadYear,
+    .term {
+        text-align: right;
+    }
+  
+    .prog_des {
+        width: 70%;
+    }
+  
+    .prog_des,
+    tbody td {
+        text-align: left;
+        padding: 5px;
+        font-size: 12px;
+  
+    }
+  
+    .prog_code,
+    .con_num {
+        text-align: right;
+        padding: 5px;
+        font-size: 12px;
+    }
+  
+    tbody th {
+        border: 1px solid black;
+    }
+  
+    tbody tr td {
+        border: 1px solid black;
+    }
+  
+  
+    /* Subject Unit Table Styles */
+    .contents, .details {
+        font-size: 8px;
+        text-align: center;
+    }
+  
+    .subj_code {
+        width: 13%;
+    }
+  
+    .subj_title {
+        width: 35%;
+    }
+  
+    .sec_code {
+        width: 20%;
+    }
+  
+    .tution_units, .cred_units {
+        width: 7%;
+    }
+  
+    .sched {
+        width: 40%;
+    }
+  
+    .breakD_fee {
+        width: 23%;
+    }
+  
+    .amount {
+        width: 10%;
+    }
+  
+    
+    .unit-table th, .unit-table td {
+        border: 1px solid gray;
+        padding: 8px;
+        text-align: center; 
+    }
+  
+    .unit-table th {
+        background-color: #f2f2f2;
+    }
+    .space{
+      height: 10rem;
+    }
+  
+    .details td{
+      border-left: none;
+      border-right: none;
+      border-top: none;
+      border-bottom: none;
+      padding: 8px;
+      text-align: center; 
+  }
+  
+  .unit-table-body{
+      border: 1px solid gray;
+   }
+  
+  .details_two{
+      border: 1px solid gray;
+  }
+  
+  .details_two tr td{
+      border: 1px solid gray;
+  }
+  
+  
+  
+  
+  </style>
+</head>
+<body>
+    <!-- Navigation Section -->
+    <header>
+        <a href="#" class="logo">Zeke Creation</a>
+        <nav>
+          <a href="#" class="active">Home</a>
+          <a href="#">About us</a>
+          <a href="#">Project</a>
+          <a href="#">Service</a>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <div class="title_banner">
+        <h1>Certificate of Registration</h1>
+        <h4>S.Y. 2023 - 2024</h4>
+    </div>
+
+    <!-- Certificate of Registration Table -->
+    <table class="table no-margin-top">
+      <thead>
+          <tr>
+              <th colspan="2" class="th_one">
+                  <img src="pup-logo.png" alt="PUP Logo">
+                  <div class="school_name">
+                      <h5>Republic of the Philippines</h5>
+                      <h4>Polytechnic University of the Philippines</h4>
+                  </div>
+              </th>
+              <th class="th_two">
+                  <div class="box">
+                      <h4 class="col_two">Certificate of Registration</h4>
+                  </div>
+              </th>
+              <th class="th_four">
+                  <img class="qr-code" src="qr-code.jpg" alt="QR Code">
+              </th>
+          </tr>
+          <tr>
+              <th class="credentials">
+                  <h4 class="name">Dungao, Niel Ezequiel Siosa</h4>
+                  <h4 class="student_no">2022-00070-SM-0</h4>
+              </th>
+              <th class="acadYear">
+                  <h4 class="AY">A.Y.: 2023-2024</h4>
+              </th>
+              <th class="term">
+                  <h4 class="year-term">TERM: First Semester</h4>
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <th colspan="2" class="prog_des">PROGRAM DESCRIPTION: BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY (STA. MARIA)</th>
+              <th class="prog_code">PROGRAM CODE: BSIT-SM</th>
+          </tr>
+          <tr>
+              <td>Campus: Sta Maria</td>
+              <td>YEAR LEVEL: Second Year</td>
+              <td colspan="2">SECTION: 2</td>
+          </tr>
+          <tr>
+              <td colspan="2" class="address">ADDRESS: Blk 8 Lot 11, El Pueblo Del Rio Subdivision, Brgy. Cay Pombo, SANTA MARIA, Philippines (the)
+              </td>
+              <td class="con_num">CONTACT NO: 09652012720</td>
+          </tr>
+      </tbody>
+  </table>
+
+  <!-- Subject Unit Table-->
+  <table class="table unit-table">
+    <tbody class="unit-table-body">
+      <tr class="contents">
+        <th class="subj_code"><h4 class="subject_code">SUBJECT CODE</h4></th>
+        <th class="subj_title"><h4 class="subject_title">SUBJECT TITLE</h4></th>
+        <th class="sec_code"><h4 class="section_code">SECTION CODE</h4></th>
+        <th class="tution_units"><h4 class="tution_unit">TUTION UNITS</h4></th>
+        <th class="cred_units"><h4 class="credit_unit">CREDIT UNITS</h4></th>
+        <th class="sched"><h4 class="schedule">SCHEDULE</h4></th>
+        <th class="breakD_fee"><h4 class="breakdown_Fees">BREAKDOWN FEES</h4></th>
+        <th class="amount"><h4 class="amounts">AMOUNT</h4></th>
+      </tr>
+      <tr class="details">
+        <td class="sc">COMP 006</td>
+        <td class="st">Data Structures and Algorithms</td>
+        <td class="sc2">BSIT-SM 2-2</td>
+        <td class="tu">5.0</td>
+        <td class="cu">3.0</td>
+        <td class="sh">S 09:30:00-11:30:00 LEC <br> T 12:30:00-15:30:00 LEC</td>
+        <td class="bfa" colspan="2">Not Applicable Php 0.00 <span></span> <br>- x - x - x - x Nothing Follows x - x - x - x - x</span></td>
+      </tr>
+      <tr class="details">
+        <td class="sc">COMP 007</td>
+        <td class="st">Operating Systems</td>
+        <td class="sc2">BSIT-SM 2-2</td>
+        <td class="tu">5.0</td>
+        <td class="cu">3.0</td>
+        <td class="sh">TH 13:00:00-15:00:00 LEC <br> T TH 15:00:00-18:00:00 LEC</td>
+        <td class="bfa" colspan="2"></td>
+      </tr>
+      <tr class="details">
+        <td class="sc">COMP 008</td>
+        <td class="st">Data Communications and Networking</td>
+        <td class="sc2">BSIT-SM 2-2</td>
+        <td class="tu">5.0</td>
+        <td class="cu">3.0</td>
+        <td class="sh">F 13:30:00-15:30:00 LEC <br> F 15:30:00-18:30:00 LEC</td>
+        <td class="bfa" colspan="2"></td>
+      </tr>
+      <tr class="details">
+        <td class="sc">ELEC IT-FE1</td>
+        <td class="st">BSIT Free Elective 1</td>
+        <td class="sc2">BSIT-SM 2-2</td>
+        <td class="tu">5.0</td>
+        <td class="cu">3.0</td>
+        <td class="sh">T 07:30:00-10:30:00 LEC</td>
+        <td class="bfa" colspan="2"></td>
+      </tr>
+      <tr class="details">
+        <td class="sc">GEED 001</td>
+        <td class="st">Understanding the Self/Pag-unawa sa Saril</td>
+        <td class="sc2">BSIT-SM 2-2</td>
+        <td class="tu">5.0</td>
+        <td class="cu">3.0</td>
+        <td class="sh">S 17:00:00-20:00:00 LEC</td>
+        <td class="bfa" colspan="2"></td>
+        </tr>
+      <tr class="details">
+        <td class="sc">GEED 028</td>
+        <td class="st">Reading Visual Arts</td>
+        <td class="sc2">BSIT-SM 2-2</td>
+        <td class="tu">5.0</td>
+        <td class="cu">3.0</td>
+        <td class="sh">T 17:00:00-20:00:00 LEC</td>
+        <td class="bfa" colspan="2"></td>
+      </tr>
+      <tr class="details">
+        <td class="sc">INTE 201</td>
+        <td class="st">Programming 3 (Structured Programming) </td>
+        <td class="sc2">BSIT-SM 2-2</td>
+        <td class="tu">5.0</td>
+        <td class="cu">3.0</td>
+        <td class="sh">TS 14:00:00-16:00:00 LEC <br> W/TH 19:30:00-21:00:00 LEC</td>
+        <td class="bfa" colspan="2"></td>
+      </tr>
+      <tr class="details">
+        <td class="sc">PATHFIT 3</td>
+        <td class="st">Physical Activity Towards Health and Fitness 3</td>
+        <td class="sc2">BSIT-SM 2-2</td>
+        <td class="tu">5.0</td>
+        <td class="cu">3.0</td>
+        <td class="sh">S 07:30:00-09:30:00 LEC</td>
+        <td class="bfa" colspan="2"></td>
+      </tr>
+      <tr class="details">
+        <td class="space" colspan="8">x - x - x - x - x - x - x - x - x - x - x - x - x - x - x - x - x - x - x - x - x - x - x Nothing Follows x - x - x - x - x - x - x - x - x - x - x - x - x - x - x - x - x - x - x - x</td>
+      </tr>
+      <tr class="details_two">
+        <td colspan="2">MAX UNITS ALLOWED:</td>
+        <td>23.0</td>
+        <td>TOTAL UNITS ENROLLED:</td>
+        <td>31.0</td>
+        <td>23.0</td>
+        <td>TOTAL ASSESSMENT:</td>
+        <td>FREE</td>
+      </tr>    
+      </tbody>
+  </table>
+</body>
+</html>
+
+
